@@ -1,0 +1,31 @@
+{
+  "provenance": "Synthetic minimal stock information exchange; illustrative peer responses, not a radio capture.",
+  "transport": "bonded Classic Bluetooth RFCOMM/SPP",
+  "frames": [
+    {
+      "direction": "phone->unit",
+      "stage": "raw bootstrap",
+      "hex": "0500000000"
+    },
+    {
+      "direction": "unit->phone",
+      "stage": "raw reply",
+      "hex": "851500000000050010000001ffeeddccbbaa00000f0005000e00"
+    },
+    {
+      "direction": "phone->unit",
+      "stage": "framed DEVICE_INFO READ",
+      "hex": "5aff14000000000000a55a0501000000000000fb"
+    },
+    {
+      "direction": "unit->phone",
+      "stage": "DEVICE_INFO REPLY with piggyback ACK",
+      "hex": "5aff66004080000000a55a05080000520000000000050010000001ffeeddccbbaa00000f0005000e0000000000000000000000000000000000000053594e54484554494300c800000000000000000000000000000000000000000000000000000000000000ec"
+    },
+    {
+      "direction": "phone->unit",
+      "stage": "ACK peer index 128",
+      "hex": "5aff09004001800000"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenNoodoe</string>
+    <string name="notification_service_name">OpenNoodoe notification bridge</string>
+    <string name="status_disconnected">DISCONNECTED</string>
+    <string name="status_key_on">KEY ON</string>
+    <string name="status_key_off">KEY OFF</string>
+    <string name="status_vehicle_waiting">Waiting for vehicle</string>
+    <string name="action_connect">Connect</string>
+    <string name="action_disconnect">Disconnect</string>
+    <string name="status_available">Ready</string>
+    <string name="status_vehicle_disconnected">Vehicle not connected</string>
+    <string name="speed_content_description">Speed</string>
+
+    <string name="section_vehicle_system">Vehicle &amp; system information</string>
+    <string name="group_vehicle">VEHICLE</string>
+    <string name="field_model_code">Model code</string>
+    <string name="field_vehicle_profile">Vehicle profile</string>
+    <string name="group_noodoe_unit">NOODOE UNIT</string>
+    <string name="field_device_identifier">Device identifier</string>
+    <string name="field_production_info">Product information</string>
+    <string name="field_hardware">Hardware</string>
+    <string name="group_software">SOFTWARE</string>
+    <string name="field_version">Version</string>
+    <string name="vehicle_profile_format">MAX %1$d km/h  ·  TYPE %2$d  ·  MOTOR %3$d</string>
+
+    <string name="section_time_welcome">Time &amp; welcome light</string>
+    <string name="action_sync_time">Sync current time</string>
+    <string name="action_set_time">Set another time</string>
+    <string name="welcome_light">Automatic welcome light</string>
+    <string name="welcome_light_description">Lights automatically when approaching the vehicle</string>
+    <string name="welcome_standby">Bluetooth standby after ignition OFF</string>
+    <string-array name="welcome_standby_options">
+        <item>10 min (no automatic light)</item>
+        <item>1 day</item>
+        <item>2 days</item>
+        <item>3 days</item>
+    </string-array>
+    <string name="welcome_disabled">Automatic light off</string>
+    <string name="welcome_immediate_disabled">Automatic lighting is unavailable with 10-minute standby</string>
+    <string name="welcome_active_format">Lights for 2 min on approach · %1$d/3 this ignition</string>
+    <string name="action_save_welcome">Save welcome-light settings</string>
+    <string name="welcome_sent">Welcome-light settings sent</string>
+    <string name="welcome_saved">Saved · will apply on next connection</string>
+
+    <string name="section_notifications">Phone notifications</string>
+    <string name="notification_display">Show notifications on the dashboard</string>
+    <string name="notification_description">Calls, messages and app notifications</string>
+    <string name="notification_calls">Call notifications</string>
+    <string name="notification_messages">Message notifications</string>
+    <string name="notification_hide_content">Hide notification content</string>
+    <string name="privacy_mode_on">Privacy mode ON</string>
+    <string name="privacy_mode_off">Privacy mode OFF</string>
+    <string name="privacy_mode_enable">Enable privacy mode</string>
+    <string name="privacy_mode_disable">Disable privacy mode</string>
+    <string name="notification_apps_all">Regular apps: All apps</string>
+    <string name="notification_apps_selected">Regular apps: %1$d selected</string>
+    <string name="action_choose_apps">Choose apps to display</string>
+    <string name="action_notification_access">Notification access</string>
+
+    <string name="dashboard_date">Dashboard date</string>
+    <string name="dashboard_time">Dashboard time</string>
+
+    <string name="section_photos">Photos</string>
+    <string name="action_choose_image">Choose image</string>
+    <string name="action_send_dashboard">Send to dashboard</string>
+    <string name="photo_slot_selected">Slot %1$d selected</string>
+    <string name="photo_slot_ready">Image ready for slot %1$d</string>
+    <string name="photo_select_required">Choose a photo for this slot first</string>
+    <string name="photo_crop_title">Position photo</string>
+    <string name="photo_crop_reset">Reset</string>
+    <string name="photo_crop_use">Use photo</string>
+    <string name="photo_crop_load_failed">The selected image could not be opened.</string>
+    <string name="photo_crop_save_failed">The cropped image could not be saved.</string>
+
+    <string name="section_dashboard_theme">Dashboard themes</string>
+    <string name="action_clock_theme">Apply clock theme</string>
+    <string name="action_speed_theme">Apply speedometer theme</string>
+    <string name="theme_description">Import your own compatible themes, or customize a theme saved on this device.</string>
+    <string name="action_theme_library">Theme library</string>
+    <string name="action_create_theme">Create theme</string>
+    <string name="theme_library_title">Theme library</string>
+    <string name="theme_reference_clock">Preserved digital clock</string>
+    <string name="theme_reference_speed">Preserved digital speedometer</string>
+    <string name="theme_custom_clock">Custom clock theme</string>
+    <string name="theme_custom_speed">Custom speedometer theme</string>
+    <string name="theme_source_preserved">Preserved reference · %1$d files</string>
+    <string name="theme_source_custom">Created on this device · %1$d files</string>
+    <string name="theme_apply_description">This replaces the active theme in the selected dashboard location.</string>
+    <string name="action_apply_theme">Apply</string>
+    <string name="theme_choose_type">Choose theme type</string>
+    <string-array name="theme_type_options"><item>Clock</item><item>Speedometer</item></string-array>
+    <string name="theme_type_clock">clock</string>
+    <string name="theme_type_speed">speedometer</string>
+    <string name="theme_create_confirm_title">Create theme</string>
+    <string name="theme_create_confirm_description">Create a %1$s theme from the cropped photo and selected CFG options. The validated template structure is retained and the complete bundle is saved before transfer.</string>
+    <string name="action_create_apply">Create &amp; apply</string>
+    <string name="action_import_theme">Import bundle</string>
+    <string name="theme_import_choose_type">Destination for imported bundle</string>
+    <string name="theme_import_confirm_title">Import transmission bundle</string>
+    <string name="theme_import_confirm_description">Validate, preserve and apply this compiled bundle as a %1$s theme. Editable appData ZIPs are not transmission bundles.</string>
+    <string name="action_import_apply">Import &amp; apply</string>
+    <string name="action_official_archive">Official archive</string>
+    <string name="theme_source_official_archive">Downloaded official archive · %1$d files</string>
+    <string name="theme_official_archive_title">Preserved official themes</string>
+    <string name="theme_official_archive_description">Enter the HTTPS URL of an OpenNoodoe theme catalog. Only compiled bundles whose SHA-256 and internal MD5 manifest are valid can be saved and sent.</string>
+    <string name="theme_repository_url_hint">https://example.org/noodoe/catalog.json</string>
+    <string name="action_load_catalog">Load</string>
+    <string name="theme_repository_https_required">The repository must use an HTTPS URL.</string>
+    <string name="theme_catalog_loading">Loading preserved-theme catalog…</string>
+    <string name="theme_catalog_empty">This catalog contains no compatible themes.</string>
+    <string name="theme_catalog_failed">Could not load catalog: %1$s</string>
+    <string name="theme_catalog_item_detail">%1$s · %2$s</string>
+    <string name="theme_size_unknown">size unknown</string>
+    <string name="theme_official_apply_description">Download, validate, preserve and apply this compiled theme bundle. Provenance: %1$s</string>
+    <string name="action_download_apply">Download &amp; apply</string>
+    <string name="theme_cfg_settings_title">Theme configuration</string>
+    <string name="theme_accent_color">Accent color</string>
+    <string name="theme_accent_color_hint">#00A77A</string>
+    <string name="theme_show_period">Show AM/PM</string>
+    <string name="theme_show_weekday">Show weekday</string>
+    <string name="theme_speed_bar_style">Speed-bar style</string>
+    <string-array name="theme_speed_bar_options"><item>Style 1</item><item>Style 2</item><item>Style 3</item><item>Style 4</item></string-array>
+    <string name="action_choose_background">Choose background</string>
+    <string name="theme_invalid_color">Enter a color as #RRGGBB.</string>
+
+    <string name="section_vehicle_settings">Vehicle settings</string>
+    <string name="hint_display_name">Display name</string>
+    <string name="automatic_brightness">Automatic brightness</string>
+    <string name="brightness_auto">Automatic brightness</string>
+    <string name="brightness_percent">Brightness %1$d%%</string>
+    <string name="metric_celsius">Kilometres &amp; Celsius</string>
+    <string name="time_24_hour">24-hour time</string>
+    <string name="action_apply_settings">Apply settings</string>
+
+    <string name="section_device_management">Device management</string>
+    <string name="app_theme">App theme</string>
+    <string-array name="theme_options">
+        <item>Automatic</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string name="app_language">Language</string>
+    <string-array name="language_options">
+        <item>System</item>
+        <item>English</item>
+        <item>繁體中文</item>
+        <item>简体中文</item>
+        <item>한국어</item>
+        <item>日本語</item>
+    </string-array>
+    <string name="action_choose_device">Choose device</string>
+    <string name="reset_noodoe">Reset Noodoe</string>
+    <string name="reset_description">Delete user content and settings</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_test_mode">Test mode</string>
+
+    <string name="device_unnamed">Unnamed device</string>
+    <string name="device_bluetooth">Bluetooth device</string>
+    <string name="device_choose_title">Choose Noodoe device</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_pair_new">Pair new device</string>
+    <string name="device_none_paired">No paired Bluetooth devices</string>
+    <string name="service_preparing">Preparing service</string>
+    <string name="notification_apps_title">Apps shown on the dashboard</string>
+    <string name="action_save">Save</string>
+    <string-array name="theme_authoring_type_options"><item>Clock</item><item>Speedometer</item></string-array>
+    <string-array name="theme_import_type_options"><item>Clock</item><item>Weather</item><item>Speedometer</item><item>Around Me</item></string-array>
+    <string name="theme_type_weather">weather</string>
+    <string name="theme_type_around_me">Around Me</string>
+    <string name="theme_custom_weather">Imported weather theme</string>
+    <string name="theme_custom_around_me">Imported Around Me theme</string>
+    <string name="theme_source_imported">Imported transmission bundle · %1$d files</string>
+    <string name="product_system_data">System information</string>
+    <string name="product_production_read">Read production information</string>
+    <string name="product_template_needed">Import a compatible clock or speedometer theme you have permission to use, then choose it as your editing template. This app includes no third-party themes.</string>
+    <string name="product_choose_template">Choose a theme to edit</string>
+</resources>

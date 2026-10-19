@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy_title">隐私政策</string>
+    <string name="privacy_policy_body">OpenNoodoe 隐私政策\n开发者：Veritas Studio\n更新日期：2026年9月16日\n联系邮箱：shin6361@gmail.com\n\nOpenNoodoe 通过 Bluetooth 直接连接兼容仪表。应用没有账户系统、互联网权限、广告或分析 SDK，不会自动向开发者发送数据。\n\n设备内的数据\n应用在设备上处理并保存选取的照片、导入的主题、设置、Bluetooth 设备信息、仪表与系统信息、最后读取的 ODO 数值和诊断记录。记录可能包含设备标识符、Bluetooth 地址、手机与 Android 信息、命令和仪表响应。\n\n权限与仪表传输\nBluetooth 权限用于搜索设备和通信。Android 11 及更早版本的位置权限用于 Bluetooth 搜索，应用不追踪位置。通知显示连接服务状态。文件通过 Android 选择界面指定。使用相应功能时，照片、主题、设置和时间命令会发送到已配对的仪表。\n\n保存与删除\n清除应用存储或卸载应用可以删除本地应用数据。手机其他位置的原文件、另行保存的副本以及已传到仪表的内容需要分别管理。应用允许 Android 系统备份，备份及设备迁移行为取决于设备和操作系统设置。开发者不运营此备份服务。\n\n支持与外部服务\n通过邮件自愿提供的信息用于回复和调查问题。发送日志前请隐藏个人信息。可通过上述邮箱请求删除已提供的信息。邮件、Google Play 和单独提供的测试报名表分别适用其相应隐私说明。\n\n变更\n应用行为改变时，本政策可能更新。如有疑问，请联系 shin6361@gmail.com。\n\nOpenNoodoe 与 KYMCO 或 Noodoe 没有隶属或合作关系，也未获得其认可。</string>
+</resources>

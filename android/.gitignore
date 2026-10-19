@@ -1,0 +1,40 @@
+# Gradle / Android Studio
+.gradle/
+**/build/
+.idea/
+*.iml
+local.properties
+.cxx/
+.externalNativeBuild/
+
+# Signing material and local configuration
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+key.properties
+keystore.properties
+.env
+.env.*
+google-services.json
+
+# Private preservation assets; never bundled in the public source snapshot
+app/src/main/assets/reference_creations/
+
+# Device evidence and distributable binaries
+captures/
+logs/
+*.log
+*.apk
+*.aab
+*.apks
+*.xapk
+*.bin
+*.hprof
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,107 @@
+plugins {
+    id "com.android.application"
+}
+
+// Supply an ignored, local properties file. Never put passwords in Gradle arguments.
+def signingPath = providers.gradleProperty("openNoodoeSigningProperties").orNull
+def releaseSigning = new Properties()
+if (signingPath != null) {
+    def signingFile = rootProject.file(signingPath)
+    if (!signingFile.isFile()) {
+        throw new GradleException("Release signing properties file does not exist.")
+    }
+    signingFile.withInputStream { releaseSigning.load(it) }
+    ["storeFile", "storePassword", "keyAlias", "keyPassword"].each { key ->
+        if (!releaseSigning.getProperty(key)?.trim()) {
+            throw new GradleException("Missing release signing property: " + key)
+        }
+    }
+    def keyStore = new File(releaseSigning.getProperty("storeFile"))
+    if (!keyStore.isAbsolute()) {
+        keyStore = new File(signingFile.parentFile, keyStore.path)
+    }
+    if (!keyStore.isFile()) {
+        throw new GradleException("Release keystore does not exist.")
+    }
+    releaseSigning.setProperty("storeFile", keyStore.absolutePath)
+}
+
+android {
+    namespace "io.opennoodoe.app"
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "io.opennoodoe.app"
+        minSdk 23
+        targetSdk 36
+        versionCode 37
+        versionName "0.10.1"
+
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    signingConfigs {
+        if (!releaseSigning.isEmpty()) {
+            release {
+                storeFile file(releaseSigning.getProperty("storeFile"))
+                storePassword releaseSigning.getProperty("storePassword")
+                keyAlias releaseSigning.getProperty("keyAlias")
+                keyPassword releaseSigning.getProperty("keyPassword")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            if (!releaseSigning.isEmpty()) {
+                signingConfig signingConfigs.release
+            }
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+// Imported themes live in app-private device storage, never in the distributed APK.
+def verifyProductAssets = tasks.register("verifyProductAssets") {
+    doLast {
+        def bundled = fileTree("src") {
+            include "**/assets/**"
+        }.files.findAll { it.isFile() }
+        if (!bundled.isEmpty()) {
+            throw new GradleException("Product APK must not bundle extracted/theme assets. " +
+                    "Keep preservation files outside the application project: " + bundled)
+        }
+    }
+}
+tasks.named("preBuild").configure { dependsOn(verifyProductAssets) }
+
+
+def verifyReleaseSigning = tasks.register("verifyReleaseSigning") {
+    doLast {
+        if (releaseSigning.isEmpty()) {
+            throw new GradleException("Release builds require -PopenNoodoeSigningProperties=<local file>.")
+        }
+    }
+}
+tasks.matching { it.name == "preReleaseBuild" }.configureEach { dependsOn(verifyReleaseSigning) }
+
+dependencies {
+    testImplementation "junit:junit:4.13.2"
+}
